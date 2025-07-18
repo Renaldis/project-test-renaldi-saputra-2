@@ -43,7 +43,7 @@ const JobCategorySection = () => {
           onClick={toggleSeeMore}
         >
           <span>{isExpanded ? "See Less" : "See More"}</span>
-          {isExpanded ? <FiChevronDown /> : <FiChevronUp />}
+          {isExpanded ? <FiChevronUp /> : <FiChevronDown />}
         </button>
       </div>
     </section>
