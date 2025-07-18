@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import RootLayout from "./layouts/RootLayout";
-import Jobs from "./pages/jobs/Jobs";
+
 import About from "./pages/about/About";
+import JobVacanciesPage from "./pages/job-vacancies/JobVacanciesPage";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           path="/find-a-job"
           element={
             <RootLayout>
-              <Jobs />
+              <JobVacanciesPage />
             </RootLayout>
           }
         />

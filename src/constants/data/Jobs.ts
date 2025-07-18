@@ -1,4 +1,4 @@
-export const jobs = [
+export const ListJobs = [
   {
     id: 1,
     logo: "https://lelogama.go-jek.com/cms_editor/2021/05/28/info-gojek-2.png",
@@ -29,6 +29,34 @@ export const jobs = [
   },
   {
     id: 3,
+    logo: "https://awsimages.detik.net.id/visual/2020/04/23/d13ca74b-8c65-421e-b0a3-93300e9dd930_169.jpeg?w=650",
+    title: "Assistant UI Designer",
+    company: "Bukalapak",
+    experience: "1-2 tahun pengalaman - Full time",
+    salary: "Rp8jt - Rp12jt",
+    salaryRange: { min: 8000000, max: 12000000 },
+    location: "Bandung, Jawa Barat",
+    description:
+      "Bukalapak mencari asisten desainer UI untuk mendukung pengembangan produk digital. Kamu akan bekerja dalam tim lintas fungsi dalam menciptakan solusi yang menarik dan responsif.",
+    daysLeft: 2,
+    isBookmark: true,
+  },
+  {
+    id: 4,
+    logo: "https://awsimages.detik.net.id/visual/2020/04/23/d13ca74b-8c65-421e-b0a3-93300e9dd930_169.jpeg?w=650",
+    title: "Assistant UI Designer",
+    company: "Bukalapak",
+    experience: "1-2 tahun pengalaman - Full time",
+    salary: "Rp8jt - Rp12jt",
+    salaryRange: { min: 8000000, max: 12000000 },
+    location: "Bandung, Jawa Barat",
+    description:
+      "Bukalapak mencari asisten desainer UI untuk mendukung pengembangan produk digital. Kamu akan bekerja dalam tim lintas fungsi dalam menciptakan solusi yang menarik dan responsif.",
+    daysLeft: 2,
+    isBookmark: true,
+  },
+  {
+    id: 5,
     logo: "https://awsimages.detik.net.id/visual/2020/04/23/d13ca74b-8c65-421e-b0a3-93300e9dd930_169.jpeg?w=650",
     title: "Assistant UI Designer",
     company: "Bukalapak",
