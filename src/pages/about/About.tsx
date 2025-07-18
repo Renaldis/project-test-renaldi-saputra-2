@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>
+    <>
       <section className="py-20 px-6">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -51,7 +51,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

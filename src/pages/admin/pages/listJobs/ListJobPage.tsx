@@ -94,7 +94,7 @@ const ListJobPage = () => {
         List Lowongan Pekerjaan
       </h1>
 
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-6 flex-col gap-3 md:flex-row md:gap-0">
         <div className="relative">
           <FiSearch className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" />
           <input
@@ -110,7 +110,7 @@ const ListJobPage = () => {
         </div>
         <Link
           to="/dashboard/add-job-vacancies"
-          className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+          className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors w-[80%] sm:w-[50%] text-center md:w-auto"
         >
           Tambah Lowongan
         </Link>

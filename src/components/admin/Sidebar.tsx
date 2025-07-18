@@ -8,7 +8,7 @@ import {
   FiLogOut,
   FiX,
 } from "react-icons/fi";
-import logo from "/assets/apple-icon.jpg";
+import logo from "/assets/jc-logo.png";
 
 type SProps = {
   isSidebarOpen: boolean;
@@ -33,7 +33,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
       <div className="flex items-center justify-between mb-10">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-10 h-10" />
-          <span className="text-xl font-bold ml-2">Admin Panel</span>
+          <span className="text-xl font-bold ml-2">JobCareer</span>
         </div>
 
         <button onClick={() => setIsSidebarOpen(false)} className="md:hidden">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
-// import logo from "/assets/renaldis.jpg";
+import logo from "/assets/jc-logo.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <div className="flex flex-col items-center justify-center py-8 bg-gray-100 min-h-screen">
       <div className="mb-8">
-        {/* <img src={logo} alt="Workify logo" className="inline-block w-20" /> */}
+        <img src={logo} alt="Workify logo" className="inline-block w-20" />
         <span className="text-2xl font-semibold text-gray-800 ml-2">
           JobCareer
         </span>
