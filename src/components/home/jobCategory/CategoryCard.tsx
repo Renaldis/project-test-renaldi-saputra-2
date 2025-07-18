@@ -9,7 +9,7 @@ type CProps = {
 
 const CategoryCard = ({ icon, title, description, jobCount }: CProps) => {
   return (
-    <div className="bg-white p-4 rounded-2xl border border-gray-200 text-center transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-xl">
+    <div className="bg-white p-4 rounded-2xl border border-gray-200 text-center transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-xl cursor-default">
       <div className="mx-auto w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
         {React.cloneElement(icon, { className: "text-blue-500 text-4xl" })}
       </div>

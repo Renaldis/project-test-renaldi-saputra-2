@@ -63,7 +63,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex justify-center items-center mt-10 md:mt-0">
+      <div className="flex-1 md:flex justify-center items-center mt-10 md:mt-0 px-10 hidden md:px-0">
         <div className="relative z-50">
           <img
             src={"/assets/man-celebrate-rmv.png"}
@@ -89,7 +89,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="absolute ">
+        <div className="absolute">
           <div className="relative rounded-full w-[10%] h-[50%] p-50 animate-spin">
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#2cb0ff] to-[#00ffe1] p-[5px]">
               <div className="w-full h-full rounded-full bg-white"></div>

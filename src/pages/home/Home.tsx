@@ -1,4 +1,5 @@
 import HeroSection from "../../components/home/hero/HeroSection";
+import HowItWorksSection from "../../components/home/howItWork/HowItWorksSection";
 import JobCategorySection from "../../components/home/jobCategory/jobCategorySection";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <HeroSection />
       <JobCategorySection />
+      <HowItWorksSection />
     </div>
   );
 };
