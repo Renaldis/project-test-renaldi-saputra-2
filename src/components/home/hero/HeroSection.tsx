@@ -64,7 +64,7 @@ const HeroSection = () => {
       </div>
 
       <div className="flex-1 md:flex justify-center items-center mt-10 md:mt-0 px-10 hidden md:px-0">
-        <div className="relative z-50">
+        <div className="relative z-10">
           <img
             src={"/assets/man-celebrate-rmv.png"}
             alt="Man celebrating"

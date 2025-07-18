@@ -4,9 +4,9 @@ import Header from "../components/header/Header";
 
 const RootLayout = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen ">
       <Header />
-      <main>
+      <main className="pt-10">
         <Outlet />
       </main>
       <Footer />
