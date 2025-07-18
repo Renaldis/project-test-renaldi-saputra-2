@@ -117,9 +117,21 @@ const Header = () => {
       </div>
 
       <div className="md:hidden">
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <FiMenu size={28} className="text-gray-600" />
-        </button>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            {theme === "light" ? (
+              <FiMoon className="text-gray-600 dark:text-gray-300" />
+            ) : (
+              <FiSun className="text-yellow-500" />
+            )}
+          </button>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <FiMenu size={28} className="text-gray-600" />
+          </button>
+        </div>
 
         {isMobileMenuOpen && (
           <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 z-50 mr-4">
