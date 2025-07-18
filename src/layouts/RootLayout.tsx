@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -5,6 +6,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="bg-gray-50 min-h-screen">
       <Header />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 };
