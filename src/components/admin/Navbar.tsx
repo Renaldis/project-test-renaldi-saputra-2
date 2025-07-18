@@ -24,7 +24,7 @@ const Navbar = ({ toggleSidebar }: NProps) => {
           className="flex items-center space-x-2"
         >
           <img
-            src={user?.profilePicture || ""}
+            src={user?.profilePicture}
             alt="Profil"
             className="w-10 h-10 rounded-full object-cover"
           />

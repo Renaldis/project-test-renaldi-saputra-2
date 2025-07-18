@@ -7,14 +7,14 @@ const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex bg-gray-100">
+    <div className="flex bg-gray-100 h-screen">
       <Sidebar
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-        <main className="flex-grow p-4 md:p-8">
+        <main className="flex-grow p-2 md:p-4 overflow-y-auto">
           <Outlet />
         </main>
       </div>

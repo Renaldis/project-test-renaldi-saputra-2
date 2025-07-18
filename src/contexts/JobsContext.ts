@@ -2,6 +2,8 @@ import { createContext, useContext } from "react";
 
 import type { TJob } from "../types/job";
 
+type NewJobData = Omit<TJob, "id">;
+
 export type JobsContextType = {
   jobs: TJob[];
   filteredJobs: TJob[];
@@ -11,6 +13,9 @@ export type JobsContextType = {
     location: string;
     company: string;
   }) => void;
+  deleteJob: (id: number) => void;
+  updateJob: (id: number, updatedData: Partial<TJob>) => void;
+  addJob: (newJob: NewJobData) => void;
 };
 
 export const JobsContext = createContext<JobsContextType | null>(null);

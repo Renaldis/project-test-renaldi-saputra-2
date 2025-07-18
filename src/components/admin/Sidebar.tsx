@@ -22,7 +22,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
   const inactiveLinkClass = "text-gray-300 hover:bg-blue-500 hover:text-white";
 
   const sidebarClasses = `
-  bg-blue-600 text-white w-64 min-h-screen p-4 flex flex-col
+  bg-blue-600 text-white w-64 min-h-screen p-4 flex flex-col max-h-[100vh]
   fixed inset-y-0 left-0 z-40 transform transition-transform duration-300 ease-in-out
   ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
   md:relative md:translate-x-0
@@ -98,7 +98,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
       <div className="mt-auto">
         <div className="flex items-center p-2 border-t border-blue-500">
           <img
-            src={user?.profilePicture || ""}
+            src={user?.profilePicture}
             alt="Admin"
             className="w-10 h-10 rounded-full object-cover"
           />

@@ -50,7 +50,33 @@ export const JobsProvider = ({ children }: { children: React.ReactNode }) => {
     setFilteredJobs(tempJobs);
   };
 
-  const value = { jobs, filteredJobs, toggleBookmark, filterJobs };
+  const deleteJob = (id: number) => {
+    const updatedJobs = jobs.filter((job) => job.id !== id);
+    setJobs(updatedJobs);
+  };
+  const updateJob = (id: number, updatedData: Partial<TJob>) => {
+    setJobs((prevJobs) =>
+      prevJobs.map((job) => (job.id === id ? { ...job, ...updatedData } : job))
+    );
+  };
+  type NewJobData = Omit<TJob, "id">;
+  const addJob = (newJobData: NewJobData) => {
+    setJobs((prevJobs) => {
+      const newJobWithId = { ...newJobData, id: Date.now() };
+
+      return [newJobWithId, ...prevJobs];
+    });
+  };
+
+  const value = {
+    jobs,
+    filteredJobs,
+    toggleBookmark,
+    filterJobs,
+    deleteJob,
+    updateJob,
+    addJob,
+  };
 
   return <JobsContext.Provider value={value}>{children}</JobsContext.Provider>;
 };

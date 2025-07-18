@@ -12,6 +12,7 @@ import AdminLayout from "./layouts/AdminLayout";
 import ListJobPage from "./pages/admin/pages/listJobs/ListJobPage";
 import CreateJobPage from "./pages/admin/pages/createJob/CreateJobPage";
 import ProfilePage from "./pages/admin/pages/profile/ProfilePage";
+import EditJobPage from "./pages/admin/pages/editJob/EditJobPage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route index element={<DashboardOverview />} />
               <Route path="list-job-vacancies" element={<ListJobPage />} />
               <Route path="add-job-vacancies" element={<CreateJobPage />} />
+              <Route path="edit-job-vacancies/:id" element={<EditJobPage />} />
               <Route path="profile" element={<ProfilePage />} />
             </Route>
           </Routes>
