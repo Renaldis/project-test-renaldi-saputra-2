@@ -30,11 +30,8 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
   const navigate = useNavigate();
   return (
     <aside className={sidebarClasses}>
-      <div
-        className="flex items-center justify-between mb-10 cursor-pointer"
-        onClick={() => navigate("/")}
-      >
-        <div className="flex items-center">
+      <div className="flex items-center justify-between mb-10 cursor-pointer">
+        <div className="flex items-center" onClick={() => navigate("/")}>
           <img src={logo} alt="Logo" className="w-10 h-10" />
           <span className="text-xl font-bold ml-2">JobCareer</span>
         </div>
@@ -55,6 +52,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
                   isActive ? activeLinkClass : inactiveLinkClass
                 } flex items-center p-3 my-1 rounded-lg transition-colors`
               }
+              onClick={() => setIsSidebarOpen(false)}
             >
               <FiGrid className="mr-3" /> Dashboard
             </NavLink>
@@ -67,6 +65,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
                   isActive ? activeLinkClass : inactiveLinkClass
                 } flex items-center p-3 my-1 rounded-lg transition-colors`
               }
+              onClick={() => setIsSidebarOpen(false)}
             >
               <FiList className="mr-3" /> List Data Perusahaan
             </NavLink>
@@ -79,6 +78,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
                   isActive ? activeLinkClass : inactiveLinkClass
                 } flex items-center p-3 my-1 rounded-lg transition-colors`
               }
+              onClick={() => setIsSidebarOpen(false)}
             >
               <FiPlusSquare className="mr-3" /> Tambah Data Baru
             </NavLink>
@@ -91,6 +91,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
                   isActive ? activeLinkClass : inactiveLinkClass
                 } flex items-center p-3 my-1 rounded-lg transition-colors`
               }
+              onClick={() => setIsSidebarOpen(false)}
             >
               <FiUser className="mr-3" /> Profile
             </NavLink>
