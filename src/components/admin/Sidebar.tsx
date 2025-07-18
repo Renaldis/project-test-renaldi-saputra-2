@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import {
   FiGrid,
@@ -27,10 +27,13 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SProps) => {
   ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
   md:relative md:translate-x-0
 `;
-
+  const navigate = useNavigate();
   return (
     <aside className={sidebarClasses}>
-      <div className="flex items-center justify-between mb-10">
+      <div
+        className="flex items-center justify-between mb-10 cursor-pointer"
+        onClick={() => navigate("/")}
+      >
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-10 h-10" />
           <span className="text-xl font-bold ml-2">JobCareer</span>
