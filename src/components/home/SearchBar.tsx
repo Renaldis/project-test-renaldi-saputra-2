@@ -1,7 +1,9 @@
 import { FiSearch } from "react-icons/fi";
 import { BiSearchAlt } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
+  const navigate = useNavigate();
   return (
     <div className="mt-8 flex items-center gap-5 max-w-md">
       <div className="group flex items-center bg-white p-2 rounded-full border border-slate-100   focus-within:border-blue-500 shadow-md flex-2">
@@ -12,7 +14,10 @@ const SearchBar = () => {
           className="w-full bg-transparent focus:outline-none text-gray-700"
         />
       </div>
-      <button className="p-3 bg-blue-500 text-white rounded-full cursor-pointer hover:bg-blue-600 shadow-xl">
+      <button
+        className="p-3 bg-blue-500 text-white rounded-full cursor-pointer hover:bg-blue-600 shadow-xl"
+        onClick={() => navigate("/find-a-job")}
+      >
         <BiSearchAlt className="text-xl" />
       </button>
     </div>
