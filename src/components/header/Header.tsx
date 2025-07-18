@@ -16,7 +16,7 @@ const Header = () => {
         Job<span className="text-[#2cb0ff]">Career</span>
       </div>
       <nav className="hidden md:flex items-center gap-x-8">
-        {navLink.map((item) => (
+        {navLink.map((item, idx) => (
           <span
             className={`hover:text-blue-500 cursor-pointer pb-2 ${
               location.pathname === item.path
@@ -24,6 +24,7 @@ const Header = () => {
                 : "text-gray-700"
             }`}
             onClick={() => navigate(item.path)}
+            key={idx}
           >
             {item.label}
           </span>

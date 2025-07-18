@@ -4,37 +4,40 @@ import RootLayout from "./layouts/RootLayout";
 
 import About from "./pages/about/About";
 import JobVacanciesPage from "./pages/job-vacancies/JobVacanciesPage";
+import { JobsProvider } from "./contexts/JobsProvider";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <RootLayout>
-              <Home />
-            </RootLayout>
-          }
-        />
-        <Route
-          path="/find-a-job"
-          element={
-            <RootLayout>
-              <JobVacanciesPage />
-            </RootLayout>
-          }
-        />
-        <Route
-          path="/about-us"
-          element={
-            <RootLayout>
-              <About />
-            </RootLayout>
-          }
-        />
-      </Routes>
-    </Router>
+    <JobsProvider>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <RootLayout>
+                <Home />
+              </RootLayout>
+            }
+          />
+          <Route
+            path="/find-a-job"
+            element={
+              <RootLayout>
+                <JobVacanciesPage />
+              </RootLayout>
+            }
+          />
+          <Route
+            path="/about-us"
+            element={
+              <RootLayout>
+                <About />
+              </RootLayout>
+            }
+          />
+        </Routes>
+      </Router>
+    </JobsProvider>
   );
 }
 

@@ -1,41 +1,9 @@
-import { useEffect, useState } from "react";
 import JobList from "../../components/job-vacancies/JobList";
-import type { TJob } from "../../types/job";
-import { ListJobs } from "../../constants/data/Jobs";
 import JobFilter from "../../components/job-vacancies/JobFilter";
+import { useJobs } from "../../contexts/JobsContext";
 
 const JobVacanciesPage = () => {
-  const [jobs, setJobs] = useState<TJob[]>(ListJobs);
-
-  const [filteredJobs, setFilteredJobs] = useState<TJob[]>(jobs);
-
-  const handleToggleBookmark = (id: number) => {
-    const updatedJobs = jobs.map((job) =>
-      job.id === id ? { ...job, isBookmark: !job.isBookmark } : job
-    );
-    setJobs(updatedJobs);
-  };
-
-  const handleFilter = (filters: {
-    title: string;
-    location: string;
-    company: string;
-  }) => {
-    let tempJobs = [...jobs];
-
-    tempJobs = tempJobs.filter(
-      (job) =>
-        job.title.toLowerCase().includes(filters.title.toLowerCase()) &&
-        job.location.toLowerCase().includes(filters.location.toLowerCase()) &&
-        job.company.toLowerCase().includes(filters.company.toLowerCase())
-    );
-
-    setFilteredJobs(tempJobs);
-  };
-
-  useEffect(() => {
-    setFilteredJobs(jobs);
-  }, [jobs]);
+  const { filteredJobs, toggleBookmark, filterJobs } = useJobs();
 
   return (
     <div className="mb-10">
@@ -47,8 +15,8 @@ const JobVacanciesPage = () => {
         </p>
       </div>
 
-      <JobFilter onFilter={handleFilter} />
-      <JobList jobs={filteredJobs} onToggleBookmark={handleToggleBookmark} />
+      <JobFilter onFilter={filterJobs} />
+      <JobList jobs={filteredJobs} onToggleBookmark={toggleBookmark} />
     </div>
   );
 };

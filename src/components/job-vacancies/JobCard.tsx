@@ -65,7 +65,7 @@ const JobCard = (props: JobCardProps) => {
       </p>
 
       <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-y-3">
-        <button className="bg-blue-600 text-white text-sm font-semibold py-1 px-2 rounded-lg w-full sm:w-auto hover:bg-blue-700 transition-colors">
+        <button className="bg-blue-600 text-white text-sm font-semibold py-2 px-5 rounded-lg w-full sm:w-auto hover:bg-blue-700 transition-colors">
           Apply Now
         </button>
         <div className="flex items-center gap-x-1.5 text-sm text-gray-400">

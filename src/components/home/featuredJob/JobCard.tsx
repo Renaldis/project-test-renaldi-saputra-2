@@ -44,7 +44,7 @@ const JobCard = (props: JobCardProps) => {
           {isBookmark ? (
             <FaBookmark
               size={20}
-              className="text-red-600 cursor-pointer hover:text-red-700"
+              className="text-blue-500 hover:text-blue-700"
             />
           ) : (
             <FiBookmark size={20} className="cursor-pointer" />

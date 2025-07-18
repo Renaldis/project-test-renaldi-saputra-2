@@ -1,4 +1,6 @@
-export const ListJobs = [
+import type { TJob } from "../../types/job";
+
+export const ListJobs: TJob[] = [
   {
     id: 1,
     logo: "https://lelogama.go-jek.com/cms_editor/2021/05/28/info-gojek-2.png",
