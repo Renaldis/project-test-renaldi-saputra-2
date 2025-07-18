@@ -5,38 +5,37 @@ import RootLayout from "./layouts/RootLayout";
 import About from "./pages/about/About";
 import JobVacanciesPage from "./pages/job-vacancies/JobVacanciesPage";
 import { JobsProvider } from "./contexts/JobsProvider";
+import AuthProvider from "./contexts/AuthProvider";
+import Login from "./components/auth/Login";
+import DashboardOverview from "./pages/admin/pages/dashboard/DashboardOverview";
+import AdminLayout from "./layouts/AdminLayout";
+import ListJobPage from "./pages/admin/pages/listJobs/ListJobPage";
+import CreateJobPage from "./pages/admin/pages/createJob/CreateJobPage";
+import ProfilePage from "./pages/admin/pages/profile/ProfilePage";
 
 function App() {
   return (
     <JobsProvider>
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <RootLayout>
-                <Home />
-              </RootLayout>
-            }
-          />
-          <Route
-            path="/find-a-job"
-            element={
-              <RootLayout>
-                <JobVacanciesPage />
-              </RootLayout>
-            }
-          />
-          <Route
-            path="/about-us"
-            element={
-              <RootLayout>
-                <About />
-              </RootLayout>
-            }
-          />
-        </Routes>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<RootLayout />}>
+              <Route index element={<Home />} />
+              <Route path="find-a-job" element={<JobVacanciesPage />} />
+              <Route path="about-us" element={<About />} />
+            </Route>
+
+            <Route path="/auth/login" element={<Login />} />
+
+            <Route path="/dashboard" element={<AdminLayout />}>
+              <Route index element={<DashboardOverview />} />
+              <Route path="list-job-vacancies" element={<ListJobPage />} />
+              <Route path="add-job-vacancies" element={<CreateJobPage />} />
+              <Route path="profile" element={<ProfilePage />} />
+            </Route>
+          </Routes>
+        </Router>
+      </AuthProvider>
     </JobsProvider>
   );
 }
