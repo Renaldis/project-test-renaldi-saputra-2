@@ -31,14 +31,14 @@ const HeroSection = () => {
         <SearchBar />
         <div className="mt-6 flex justify-center md:justify-start gap-x-4">
           <div className="flex gap-4">
-            <div className="flex items-center cursor-pointer border rounded-lg py-1 px-4 hover:shadow-xl">
+            <div className="flex items-center cursor-pointer border border-slate-400/80 rounded-lg py-1 bg-white px-4 hover:shadow-xl">
               <img src={"/assets/gplay-icon.jpg"} alt="G" className="h-12" />
               <div className="flex flex-col">
                 <span className="font-light text-xs">Get it on</span>
                 <span className="text-sm font-medium">Google Play</span>
               </div>
             </div>
-            <div className="flex items-center cursor-pointer border rounded-lg py-1 px-4 hover:shadow-xl">
+            <div className="flex items-center cursor-pointer border border-slate-400/80 rounded-lg py-1 px-4 hover:shadow-xl bg-white">
               <img src={"/assets/apple-icon.jpg"} alt="G" className="h-12" />
               <div className="flex flex-col">
                 <span className="font-light text-xs">Download on</span>
@@ -55,7 +55,7 @@ const HeroSection = () => {
               return (
                 <Icon
                   key={item.name || index}
-                  className="w-8 h-8 p-2 text-white bg-blue-400 rounded cursor-pointer hover:shadow-md hover:bg-blue-500"
+                  className="w-8 h-8 p-2 text-white bg-blue-400 rounded cursor-pointer hover:shadow-md hover:bg-blue-500 "
                 />
               );
             })}
