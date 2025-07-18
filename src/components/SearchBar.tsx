@@ -1,4 +1,5 @@
-import { FiSearch, FiSliders } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
+import { BiSearchAlt } from "react-icons/bi";
 
 const SearchBar = () => {
   return (
@@ -12,7 +13,7 @@ const SearchBar = () => {
         />
       </div>
       <button className="p-3 bg-blue-500 text-white rounded-full cursor-pointer hover:bg-blue-600 shadow-xl">
-        <FiSliders className="text-xl" />
+        <BiSearchAlt className="text-xl" />
       </button>
     </div>
   );
