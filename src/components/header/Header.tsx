@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
 const navLink = [
   { label: "Home", path: "/" },
   { label: "Find A Job", path: "/find-a-job" },
@@ -7,6 +8,8 @@ const navLink = [
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <header className="bg-white shadow-sm py-3 px-6 md:px-20 flex justify-between items-center">
       <div className="text-2xl font-bold text-blue-500">
@@ -15,7 +18,11 @@ const Header = () => {
       <nav className="hidden md:flex items-center gap-x-8">
         {navLink.map((item) => (
           <span
-            className="text-gray-700 hover:text-blue-500 cursor-pointer"
+            className={`hover:text-blue-500 cursor-pointer pb-2 ${
+              location.pathname === item.path
+                ? "border-b-2 border-blue-400 text-blue-500 font-semibold"
+                : "text-gray-700"
+            }`}
             onClick={() => navigate(item.path)}
           >
             {item.label}
