@@ -10,7 +10,7 @@ import appStoreBtn from "/assets/apple-icon.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white">
+    <footer className="bg-blue-600 dark:bg-slate-600 text-white">
       <div className="container mx-auto py-16 px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-1">

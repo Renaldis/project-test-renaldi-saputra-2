@@ -13,32 +13,38 @@ import ListJobPage from "./pages/admin/pages/listJobs/ListJobPage";
 import CreateJobPage from "./pages/admin/pages/createJob/CreateJobPage";
 import ProfilePage from "./pages/admin/pages/profile/ProfilePage";
 import EditJobPage from "./pages/admin/pages/editJob/EditJobPage";
+import { ThemeProvider } from "./contexts/ThemeProvider";
 
 function App() {
   return (
-    <JobsProvider>
-      <AuthProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<RootLayout />}>
-              <Route index element={<Home />} />
-              <Route path="find-a-job" element={<JobVacanciesPage />} />
-              <Route path="about-us" element={<About />} />
-            </Route>
+    <ThemeProvider>
+      <JobsProvider>
+        <AuthProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<RootLayout />}>
+                <Route index element={<Home />} />
+                <Route path="find-a-job" element={<JobVacanciesPage />} />
+                <Route path="about-us" element={<About />} />
+              </Route>
 
-            <Route path="/auth/login" element={<Login />} />
+              <Route path="/auth/login" element={<Login />} />
 
-            <Route path="/dashboard" element={<AdminLayout />}>
-              <Route index element={<DashboardOverview />} />
-              <Route path="list-job-vacancies" element={<ListJobPage />} />
-              <Route path="add-job-vacancies" element={<CreateJobPage />} />
-              <Route path="edit-job-vacancies/:id" element={<EditJobPage />} />
-              <Route path="profile" element={<ProfilePage />} />
-            </Route>
-          </Routes>
-        </Router>
-      </AuthProvider>
-    </JobsProvider>
+              <Route path="/dashboard" element={<AdminLayout />}>
+                <Route index element={<DashboardOverview />} />
+                <Route path="list-job-vacancies" element={<ListJobPage />} />
+                <Route path="add-job-vacancies" element={<CreateJobPage />} />
+                <Route
+                  path="edit-job-vacancies/:id"
+                  element={<EditJobPage />}
+                />
+                <Route path="profile" element={<ProfilePage />} />
+              </Route>
+            </Routes>
+          </Router>
+        </AuthProvider>
+      </JobsProvider>
+    </ThemeProvider>
   );
 }
 

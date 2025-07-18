@@ -14,7 +14,7 @@ const JobCategorySection = () => {
   };
 
   return (
-    <section className="bg-white py-20 px-6 md:px-20">
+    <section className="bg-white py-20 px-6 md:px-20 dark:bg-slate-100">
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
           Browse jobs category

@@ -16,7 +16,7 @@ const PlatformIcons = [
 
 const HeroSection = () => {
   return (
-    <section className="2xl:mt-20 px-6 md:px-20 py-12 md:py-10 flex flex-col md:flex-row items-center gap-8">
+    <section className="2xl:mt-20 px-6 dark:bg-slate-200 md:px-20 py-12 md:py-10 flex flex-col md:flex-row items-center gap-8">
       <div className="flex-1 text-center md:text-left">
         <h1 className="text-5xl md:text-6xl font-bold text-blue-500 leading-tight">
           Find your <br />

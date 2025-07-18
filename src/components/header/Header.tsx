@@ -1,8 +1,16 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { useState } from "react";
-import { FiChevronDown, FiLogOut, FiMenu, FiUser } from "react-icons/fi";
+import {
+  FiChevronDown,
+  FiLogOut,
+  FiMenu,
+  FiMoon,
+  FiSun,
+  FiUser,
+} from "react-icons/fi";
 import { MdOutlineDashboard } from "react-icons/md";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -11,6 +19,7 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const { theme, toggleTheme } = useTheme();
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -23,8 +32,11 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm py-4 px-6 md:px-20 flex justify-between items-center fixed w-full z-50">
-      <NavLink to="/" className="text-2xl font-bold text-blue-500">
+    <header className="dark:bg-gray-800 dark:text-white bg-white shadow-sm py-4 px-6 md:px-20 flex justify-between items-center fixed w-full z-50">
+      <NavLink
+        to="/"
+        className="text-2xl font-bold text-blue-500 dark:text-white"
+      >
         Job<span className="text-[#2cb0ff]">Career</span>
       </NavLink>
 
@@ -34,7 +46,7 @@ const Header = () => {
             key={item.label}
             to={item.path}
             className={({ isActive }) =>
-              `hover:text-blue-500 cursor-pointer pb-1 ${
+              `hover:text-blue-500 cursor-pointer pb-1 dark:text-white ${
                 isActive
                   ? "border-b-2 border-blue-500 text-blue-500 font-semibold"
                   : "text-gray-700"
@@ -45,8 +57,17 @@ const Header = () => {
           </NavLink>
         ))}
       </nav>
-
       <div className="hidden md:flex items-center gap-x-4">
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          {theme === "light" ? (
+            <FiMoon className="text-gray-600 dark:text-gray-300" />
+          ) : (
+            <FiSun className="text-yellow-500" />
+          )}
+        </button>
         {user ? (
           <div className="relative">
             <button
